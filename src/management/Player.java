@@ -1,33 +1,57 @@
 package management;
 
-public class Player {
+import management.decorator.Training;
+import management.strategy.PlayStrategy;
 
+public abstract class Player {
+
+    private PlayStrategy playStrategy;
+    private Training training;
     private String name;
-    private int age;;
+    private int age;
     private int number;
     private String position;
-    private RolePlay rollPlay;
 
-    public Player(final String name, int age, int number, String position){
+
+    public Player(final String name, final int age, final int number, final String position)
+    {
         this.name = name;
         this.age = age;
         this.number = number;
         this.position = position;
+
+        System.out.println("선수가 등록되었습니다.");
     }
 
-    public void setAge(int age) {
+    public void play(){
+      playStrategy.play();
+    }
+
+    public void doTraining(){
+        training.doTraining();
+    }
+
+    public void setPlayStrategy(PlayStrategy playStrategy){
+        this.playStrategy = playStrategy;
+    }
+
+    public void setTraining(Training training) {
+        this.training = training;
+    }
+
+    public void setAge(final int age) {
         this.age = age;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(final int number) {
         this.number = number;
     }
 
-    public void setPosition(String position) {
+    public void setPosition(final String position) {
         this.position = position;
     }
 
-    public String getName() {
+    public  String getName() {
         return name;
     }
 
@@ -41,11 +65,6 @@ public class Player {
 
     public String getPosition() {
         return position;
-    }
-
-    public void setRollPlay(RolePlay rollPlay){
-        this.rollPlay = rollPlay;
-        rollPlay.play();
     }
 
 }
