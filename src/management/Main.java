@@ -11,7 +11,7 @@ public class Main {
         Manager manager = Manager.getInstance();
 
         int choice, playerNumber, trianingChoice;
-        String  playerName ,playStrategy;
+        String playerName, playStrategy;
         boolean status = true;
 
         while (status) {
@@ -47,6 +47,8 @@ public class Main {
                     System.out.println("고생하셨습니다.");
                     status = false;
                     break;
+                default:
+                    System.out.println("잘못 입력하셨습니다. 다시 입력해 주세요.");
             }
         }
 
