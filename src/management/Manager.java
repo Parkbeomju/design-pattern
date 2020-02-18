@@ -17,7 +17,7 @@ public class Manager {
 
     Scanner scanner = new Scanner(System.in);
 
-    public static synchronized Manager getInstance() {
+    public static Manager getInstance() {
         if (manager == null) {
             manager = new Manager();
         }
@@ -57,7 +57,7 @@ public class Manager {
                         break;
                     case "mid":
                         p.setPlayStrategy(new MidFielderPlayStrategy());
-                        System.out.println("미드필더 임무 지완료");
+                        System.out.println("경기조율 임무 지시 완료");
                         break;
                     case "defend":
                         p.setPlayStrategy(new DefenderPlayStrategy());
