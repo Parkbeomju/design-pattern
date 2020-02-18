@@ -1,6 +1,8 @@
 package management.player;
 
 import management.decorator.Training;
+import management.state.Condition;
+import management.state.Normal;
 import management.strategy.PlayStrategy;
 
 public abstract class Player {
@@ -11,6 +13,7 @@ public abstract class Player {
     private int age;
     private int number;
     private String position;
+    private Condition condition;
 
 
     public Player(final String name, final int age, final int number, final String position)
@@ -19,9 +22,10 @@ public abstract class Player {
         this.age = age;
         this.number = number;
         this.position = position;
-
+        this.condition = Normal.getInstance();
         System.out.println("선수가 등록되었습니다.");
     }
+
 
     public void play(){
       playStrategy.play();
@@ -37,6 +41,18 @@ public abstract class Player {
 
     public void setTraining(Training training) {
         this.training = training;
+    }
+
+    public void setCondition(final Condition condition) {
+        this.condition = condition;
+    }
+
+    public void isInguried(){
+        condition.isInjuried(this);
+    }
+
+    public void isNormalCondition(){
+        condition.isNormalCondition(this);
     }
 
     public void setAge(final int age) {

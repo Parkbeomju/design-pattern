@@ -5,6 +5,9 @@ import management.player.Defender;
 import management.player.Forward;
 import management.player.MidFielder;
 import management.player.Player;
+import management.state.Condition;
+import management.state.Ingery;
+import management.state.Normal;
 import management.strategy.DefenderPlayStrategy;
 import management.strategy.ForwardPlayStrategy;
 import management.strategy.MidFielderPlayStrategy;
@@ -103,6 +106,21 @@ public class Manager {
             p.doTraining();
             break;
           default:
+            break;
+        }
+      }
+    }
+  }
+
+  public void setState(String name, int statechoice){
+    for(Player p : players){
+      if (p.getName().equals(name)){
+        switch (statechoice){
+          case 1:
+            p.isInguried();
+            break;
+          case 2:
+            p.isNormalCondition();
             break;
         }
       }

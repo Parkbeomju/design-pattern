@@ -12,7 +12,7 @@ public class Main {
         ManagementMenu managementMenu = new ManagementMenu();
         Manager manager = Manager.getInstance();
 
-        int choice, playerNumber, trianingChoice;
+        int choice, playerNumber, trianingChoice, stateChoice;
         String playerName, playStrategy;
         boolean status = true;
 
@@ -46,6 +46,13 @@ public class Main {
                     manager.train(playerName, trianingChoice);
                     break;
                 case 5:
+                    System.out.println("상태를 변경할 선수 이름을 입력하세요.");
+                    playerName = scanner.next();
+                    System.out.println("어떤 상태로 바꿀까요? 1.부상 2.정상");
+                    stateChoice = scanner.nextInt();
+                    manager.setState(playerName, stateChoice);
+                    break;
+                case 6:
                     System.out.println("고생하셨습니다.");
                     status = false;
                     break;
