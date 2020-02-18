@@ -1,4 +1,4 @@
-package management;
+package management.player;
 
 import management.decorator.Training;
 import management.strategy.PlayStrategy;

@@ -1,4 +1,6 @@
-package management;
+package management.player;
+
+import management.player.Player;
 
 public class Forward extends Player {
 
