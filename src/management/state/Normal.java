@@ -11,9 +11,9 @@ public class Normal implements Condition {
     return normal;
   }
 
-  public void isInjuried(final Player player){
+  public void isInjured(final Player player){
     System.out.println("부상을 당한 상태가 됩니다");
-    player.setCondition(Inguery.getInstance());
+    player.setCondition(Injury.getInstance());
   }
 
   public void isNormalCondition(final Player player){

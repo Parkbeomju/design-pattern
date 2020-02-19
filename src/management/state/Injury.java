@@ -2,16 +2,16 @@ package management.state;
 
 import management.player.Player;
 
-public class Inguery implements Condition{
+public class Injury implements Condition{
 
-  private static Inguery ingery = new Inguery();
-  private Inguery(){}
+  private static Injury ingery = new Injury();
+  private Injury(){}
 
-  public static Inguery getInstance(){
+  public static Injury getInstance(){
     return ingery;
   }
 
-  public void isInjuried(final Player player){
+  public void isInjured(final Player player){
     System.out.println("부상 상태가 심각해졌습니다.");
   }
 

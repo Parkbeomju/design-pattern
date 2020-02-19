@@ -35,11 +35,11 @@ public abstract class Player {
         training.doTraining();
     }
 
-    public void setPlayStrategy(PlayStrategy playStrategy){
+    public void setPlayStrategy(final PlayStrategy playStrategy){
         this.playStrategy = playStrategy;
     }
 
-    public void setTraining(Training training) {
+    public void setTraining(final Training training) {
         this.training = training;
     }
 
@@ -48,24 +48,24 @@ public abstract class Player {
     }
 
     public void isInguried(){
-        condition.isInjuried(this);
+        condition.isInjured(this);
     }
 
     public void isNormalCondition(){
         condition.isNormalCondition(this);
     }
 
-    public void setAge(final int age) {
-        this.age = age;
-    }
-
-    public void setNumber(final int number) {
-        this.number = number;
-    }
-
-    public void setPosition(final String position) {
-        this.position = position;
-    }
+//    public void setAge(final int age) {
+//        this.age = age;
+//    }
+//
+//    public void setNumber(final int number) {
+//        this.number = number;
+//    }
+//
+//    public void setPosition(final String position) {
+//        this.position = position;
+//    }
 
     public  String getName() {
         return name;

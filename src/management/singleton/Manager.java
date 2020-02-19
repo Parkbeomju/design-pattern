@@ -86,7 +86,7 @@ public class Manager {
     }
   }
 
-  public void train(String name, int trainingName) {
+  public void train(final String name, final int trainingName) {
     for (Player p : players) {
       if (p.getName().equals(name)) {
         switch (trainingName) {
@@ -109,10 +109,10 @@ public class Manager {
     }
   }
 
-  public void setState(String name, int statechoice){
-    for(Player p : players){
-      if (p.getName().equals(name)){
-        switch (statechoice){
+  public void setState(final String name, final int statechoice) {
+    for (Player p : players) {
+      if (p.getName().equals(name)) {
+        switch (statechoice) {
           case 1:
             p.isInguried();
             break;
