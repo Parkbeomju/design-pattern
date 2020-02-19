@@ -4,7 +4,7 @@ public abstract class TrainingDecorator extends Training {
 
     private Training decoratedTraining;
 
-    public TrainingDecorator (Training decoratedTraining){
+    public TrainingDecorator (final Training decoratedTraining){
         this.decoratedTraining = decoratedTraining;
     }
 

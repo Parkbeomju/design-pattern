@@ -2,7 +2,7 @@ package management.decorator;
 
 public class PassTrainingDecorator extends TrainingDecorator {
 
-    public PassTrainingDecorator(Training decoratedTraining){
+    public PassTrainingDecorator(final Training decoratedTraining){
         super(decoratedTraining);
     }
 

@@ -11,12 +11,12 @@ public class Normal implements Condition {
     return normal;
   }
 
-  public void isInjuried(Player player){
+  public void isInjuried(final Player player){
     System.out.println("부상을 당한 상태가 됩니다");
     player.setCondition(Inguery.getInstance());
   }
 
-  public void isNormalCondition(Player player){
+  public void isNormalCondition(final Player player){
     System.out.println("부상을 당한 상태가 아닙니다.");
   }
 

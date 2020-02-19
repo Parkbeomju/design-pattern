@@ -11,11 +11,11 @@ public class Inguery implements Condition{
     return ingery;
   }
 
-  public void isInjuried(Player player){
+  public void isInjuried(final Player player){
     System.out.println("부상 상태가 심각해졌습니다.");
   }
 
-  public void isNormalCondition(Player player){
+  public void isNormalCondition(final Player player){
     System.out.println("부상에서 회복되었습니다.");
     player.setCondition(Normal.getInstance());
   }

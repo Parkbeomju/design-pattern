@@ -4,7 +4,7 @@ import management.player.Player;
 
 public interface Condition {
 
-  void isInjuried(Player player);
-  void isNormalCondition(Player player);
+  void isInjuried(final Player player);
+  void isNormalCondition(final Player player);
 
 }
