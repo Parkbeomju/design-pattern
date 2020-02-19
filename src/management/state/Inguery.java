@@ -2,12 +2,12 @@ package management.state;
 
 import management.player.Player;
 
-public class Ingery implements Condition{
+public class Inguery implements Condition{
 
-  private static Ingery ingery = new Ingery();
-  private Ingery(){}
+  private static Inguery ingery = new Inguery();
+  private Inguery(){}
 
-  public static Ingery getInstance(){
+  public static Inguery getInstance(){
     return ingery;
   }
 

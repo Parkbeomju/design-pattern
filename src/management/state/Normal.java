@@ -13,7 +13,7 @@ public class Normal implements Condition {
 
   public void isInjuried(Player player){
     System.out.println("부상을 당한 상태가 됩니다");
-    player.setCondition(Ingery.getInstance());
+    player.setCondition(Inguery.getInstance());
   }
 
   public void isNormalCondition(Player player){
